@@ -13,8 +13,10 @@ class _MyAppState extends State<MyApp> {
   var _questionIndex = 0;
   void _answerQuestion() {
     setState(() {
-      if (_questionIndex == 0) {
+      if (_questionIndex != 2) {
         _questionIndex++;
+      } else {
+        _questionIndex = 0;
       }
     });
     print('Answer chosen!');
@@ -25,7 +27,7 @@ class _MyAppState extends State<MyApp> {
     var questions = [
       {
         'questionText': 'What is your favourite color?',
-        'answers': ['Red', 'Blue' 'Black']
+        'answers': ['Red', 'Blue', 'Black']
       },
       {
         'questionText': 'What is your favourite car?',
@@ -33,7 +35,7 @@ class _MyAppState extends State<MyApp> {
       },
       {
         'questionText': 'What is your favourite animal?',
-        'answers': ['Tiger', 'Sparrow' 'Parrot', 'Lion']
+        'answers': ['Tiger', 'Sparrow', 'Parrot', 'Lion']
       },
     ];
 
